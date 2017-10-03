@@ -27,12 +27,19 @@ public class CarControl : MonoBehaviour {
 				return;
 			}
 		}
-		if (Physics.Raycast(transform.position + transform.up + transform.forward * 4, transform.forward, 5)) {
+
+		var frontpos = BezierCurve.Sample(P0,P1,P2,P3, progress + 7/sumdist);
+		if (Physics.Linecast(transform.position + transform.up + transform.forward*2f, frontpos + transform.up)){
 			targetSpeed = 0;
 		}
 		else {
 			targetSpeed = maxSpeed;
 		}
+
+		Debug.DrawLine(transform.position + transform.up + transform.forward*2f, 
+			frontpos + transform.up,
+			targetSpeed > 0.1 ? Color.green : Color.yellow, Time.deltaTime);
+
 		currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref vel, 0.1f);
 		
 		progress = Mathf.Clamp01(progress + (currentSpeed / sumdist) * Time.deltaTime);

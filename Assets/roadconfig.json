@@ -1,6 +1,6 @@
 {
-    "LaneNum":6,
-    "RoadWidth":44,
+    "LaneNum":2,
+    "RoadWidth":22 ,
     "RoadLength":40,
-    "CarSpawnWaitTime":1.5
+    "CarSpawnWaitTime":3
 }
