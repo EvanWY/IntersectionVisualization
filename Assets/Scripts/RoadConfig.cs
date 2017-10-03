@@ -35,4 +35,5 @@ public class RoadConfigContent {
 	public int LaneNum;
     public float RoadWidth;
 	public float RoadLength;
+    public float CarSpawnWaitTime;
 }

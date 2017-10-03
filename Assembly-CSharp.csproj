@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6728A8C6-4D70-7051-AC55-3135B36481CA}</ProjectGuid>
+    <ProjectGuid>{C85AAF50-92DD-27CF-BB59-2248947A2496}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BezierCurve.cs" />
+     <Compile Include="Assets\Scripts\CamControl.cs" />
+     <Compile Include="Assets\Scripts\CarControl.cs" />
      <Compile Include="Assets\Scripts\Intersection.cs" />
      <Compile Include="Assets\Scripts\RoadConfig.cs" />
      <None Include="Assets\Materials\Road.shader" />
